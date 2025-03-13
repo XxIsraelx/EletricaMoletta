@@ -9,16 +9,25 @@ body {
 nav {
     background-color: #413E3E;
     height: 40px;
-    width: 100%;  /* Usando 100% para a largura da nav ocupar toda a tela */
+    width: 100%;
     display: flex;
     align-items: center;
     padding-left: 15px;
     padding-right: 15px;
-    position: fixed;  /* Torna a nav fixa na tela */
-    top: 0;  /* Fixa a nav no topo da página */
-    left: 0;  /* Garante que a nav ocupe toda a largura da tela */
-    z-index: 1000;  /* Garante que a nav fique acima de outros elementos */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #5f5e5e ; /* Inicialmente com borda transparente */
+    transition: height 0.3s ease, border-bottom 0.3s ease; /* Adiciona animação na altura e borda */
 }
+
+nav:hover {
+    background-color: #555050;
+    height: 60px; /* Aumenta a altura quando passar o mouse */
+    border-bottom: 2px solid #9F9E9E; /* Muda a cor da borda ao passar o mouse */
+}
+
 
 body {
     padding-top: 40px; /* Adiciona um espaçamento no topo para que o conteúdo não fique atrás da nav */
@@ -27,13 +36,6 @@ body {
 nav:hover {
     background-color: #555050; /* Cor de fundo mais clara ao passar o mouse */
 }
-
-
-
-
-
-
-
 
 .logo {
     background-image: url('./assets_nav/logoMoletta.png');

@@ -39,7 +39,7 @@
 }
 .products-heading {
     text-align: center; /* Centraliza o texto */
-    margin-top: 40px; /* Ajuste o espaçamento conforme necessário */
+    margin-top: -10px; /* Ajuste o espaçamento conforme necessário */
 }
 
 .products-heading p {
@@ -106,19 +106,23 @@
     color: #0462a0 /* Nova cor ao passar o mouse */
 }
 .rectangle-bottom {
-    width: 100px; /* Largura inicial */
+    width: 50px; /* Largura inicial */
     height: 4px; /* Espessura do retângulo */
     background-color: #000000; /* Cor preta */
     margin-top: 20px; /* Espaço entre a frase e o retângulo */
     margin-left: auto; /* Alinha o retângulo à esquerda */
     margin-right: auto; /* Alinha o retângulo à direita */
-    transition: width 0.3s ease; /* Transição suave para a mudança de largura */
+    transition: width 1s ease; /* Transição suave para a mudança de largura */
+}
+/* Quando a classe 'active' for adicionada, o retângulo aumenta de largura */
+.rectangle-bottom.active {
+    width: 250px;  /* Nova largura do retângulo ao "ativar o hover" */
+}
+.rectangle-bottom:hover {
+    background-color: #0462a0
+
 }
 
-/* Efeito ao passar o mouse sobre o retângulo */
-.rectangle-bottom:hover {
-    width: 150px; /* Nova largura do retângulo ao passar o mouse */
-}
 
 
 

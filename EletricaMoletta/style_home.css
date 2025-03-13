@@ -189,9 +189,9 @@
 }
 
 /* Ajustes para a largura das imagens individuais */
-.image-1 { margin-top: 37px; width: 130px; }
+.image-1 { margin-top: 37px; width: 130px; margin-left: -35px; }
 .image-2 { margin-top: 5px; width: 160px; }
-.image-3 { margin-top: 15px; width: 140px; }
+.image-3 { margin-top: 15px; width: 140px; margin-left: -15px; }
 
 .image-4 { margin-top: -37px; margin-bottom: -25px; width: 100px; }
 .image-5 { margin-top: -90px; width: 150px; }
@@ -201,7 +201,7 @@
     width: 100%;
     height: 135px;
     background: linear-gradient(45deg, #0173BF, #073647); /* Gradiente de cor */
-    margin-top: 135px;
+    margin-top: 170px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -215,8 +215,12 @@
     font-size: 29px;
     color: #FFFFFF;
     margin: 0;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra do texto */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(100px); /* Inicialmente abaixo */
+    opacity: 0; /* Inicialmente invisível */
+    transition: transform 1s ease, opacity 1s ease; /* Transição mais lenta */
 }
+
 body .after-welcome {
     background-color: #FFFBFB; /* Cor após o retângulo */
     height: 4374px; /* Ajuste a altura conforme necessário */
