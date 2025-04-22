@@ -11,25 +11,43 @@
 }
 
 .container_industria {
-    margin-left: 25px;
+    margin-left: 2vw;
     position: relative;
     top: 100px;
-    left: -10px;
-    width: 1720px;
-    height: 600px;
+    left: 0;
+    width: 90vw;
+    max-width: 1720px;
+    height: 65vh;
+    max-height: 600px;
     background-image: url('./assets_home/industria-4-925x400.png');
-    background-size: cover;
+    background-size: 100%;
     background-position: center;
     z-index: 1;
     border-radius: 2px;
     display: flex;
     align-items: center;
-    padding-left: 150px;
-    gap: 50px;
-    /* Efeito Parallax */
-    background-attachment: fixed; /* Fixa a imagem de fundo enquanto a página rola */
-    background-position: center center;
+    padding-left: 5vw;
+    gap: 3vw;
+    background-attachment: fixed;
     background-repeat: no-repeat;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 1024px) {
+    .container_industria {
+        height: 40vh;
+        padding-left: 3vw;
+        gap: 2vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .container_industria {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        background-attachment: scroll;
+    }
 }
 
 
