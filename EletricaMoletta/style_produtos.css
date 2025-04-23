@@ -5,6 +5,10 @@
     margin-top: 86px;
     margin-left: 140px;
 }
+.container-produtos a {
+    text-decoration: none;
+    color: inherit;
+}
 
 /* Coluna da esquerda */
 .coluna-esquerda {
