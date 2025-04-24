@@ -1,0 +1,245 @@
+.logo_moletta {
+    position: absolute;
+    top: 60px; /* Distância da parte superior da tela, ajustando para ficar abaixo da nav */
+    left: 80px; /* Alinha à esquerda */
+    width: 350px; /* Largura do container */
+    height: 60px; /* Altura do container */
+    background-image: url('./assets_home/logoMoletta_2-removebg-preview.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+.container_industria {
+    margin-left: 2vw;
+    position: relative;
+    top: 100px;
+    left: 0;
+    width: 90vw;
+    max-width: 1720px;
+    height: 65vh;
+    max-height: 600px;
+    background-image: url('./assets_home/industria-4-925x400.png');
+    background-size: 100%;
+    background-position: center;
+    z-index: 1;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    padding-left: 5vw;
+    gap: 3vw;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 1024px) {
+    .container_industria {
+        height: 40vh;
+        padding-left: 3vw;
+        gap: 2vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .container_industria {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        background-attachment: scroll;
+    }
+}
+
+
+
+.rectangle-inside_1,
+.rectangle-inside_2 {
+    width: 540px;
+    height: 400px;
+    background-color: rgba(254, 255, 255, 0.8);
+    border-radius: 5px;
+    z-index: 1;
+    position: relative; /* Para manter a posição correta dentro do flex */
+    border-radius: 15px;
+}
+
+.rectangle-inside_1 h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 37px;
+    color: #373333;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+.rectangle-inside_1 p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 23px;
+    color: #201F1F;
+    margin-top: -10px; /* Ajustado para melhor centralização */
+    text-align: center;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+.product-button {
+    background-color: #0372C0;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    width: 350px;
+    height: 60px;
+    border: none;
+    border-radius: 2px;
+    margin-top: 70px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+.product-button:hover {
+    background: linear-gradient(45deg, #0372C0, #04A9F4); /* Efeito de gradiente */
+}
+
+
+
+
+.rectangle-inside_2 {
+    width: 540px;
+    height: 400px;
+    background-color: rgba(254, 255, 255, 0.8);
+    z-index: 1;
+    position: relative; /* Para garantir que os elementos internos se alinhem corretamente */
+    margin-left: 425px;
+    padding-top: 20px; /* Espaço para o título */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rectangle-inside_2 h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 37px;
+    color: #373333;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para as colunas de imagens */
+.image-columns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* Ajustes nas colunas de imagens */
+.image-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espaçamento entre as imagens */
+}
+
+/* Coluna da esquerda */
+.column-left {
+    margin-left: 20px;
+    margin-right: 50px;
+}
+
+/* Coluna da direita */
+.column-right {
+    margin-right: 20px;
+}
+
+/* Estilos gerais para as imagens */
+/* Garantir que o efeito de zoom aconteça de maneira suave */
+.image-column img {
+    width: 210px; /* Tamanho fixo das imagens */
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Transição suave para o efeito de zoom */
+    transform-origin: center center; /* Garante que o zoom ocorra a partir do centro */
+}
+
+/* Efeito de zoom ao passar o mouse */
+.image-column img:hover {
+    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
+}
+
+/* Ajuste no estilo geral da coluna */
+.image-columns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+    flex-wrap: wrap; /* Permite que as colunas se ajustem */
+}
+
+/* Ajustes nas colunas de imagens */
+.image-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center; /* Centraliza as imagens nas colunas */
+}
+
+/* Coluna da esquerda */
+.column-left {
+    margin-left: 20px;
+    margin-right: 50px;
+}
+
+/* Coluna da direita */
+.column-right {
+    margin-right: 20px;
+}
+
+/* Ajustes para a largura das imagens individuais */
+.image-1 { margin-top: 37px; width: 130px; margin-left: -35px; }
+.image-2 { margin-top: 5px; width: 160px; }
+.image-3 { margin-top: 15px; width: 140px; margin-left: -15px; }
+
+.image-4 { margin-top: -37px; margin-bottom: -25px; width: 100px; }
+.image-5 { margin-top: -90px; width: 150px; }
+.image-6 { margin-top: 5px; width: 170px; }
+
+.welcome-rectangle {
+    width: 100%;
+    height: 135px;
+    background: linear-gradient(45deg, #0173BF, #073647); /* Gradiente de cor */
+    margin-top: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.welcome-rectangle p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 29px;
+    color: #FFFFFF;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(100px); /* Inicialmente abaixo */
+    opacity: 0; /* Inicialmente invisível */
+    transition: transform 1s ease, opacity 1s ease; /* Transição mais lenta */
+}
+
+body .after-welcome {
+    background-color: #FFFBFB; /* Cor após o retângulo */
+    height: 4374px; /* Ajuste a altura conforme necessário */
+}

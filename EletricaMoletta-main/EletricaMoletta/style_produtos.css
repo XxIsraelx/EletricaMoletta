@@ -1,0 +1,359 @@
+/* Contêiner das 3 colunas de itens */
+.container-produtos {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 86px;
+    margin-left: 140px;
+}
+.container-produtos a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Coluna da esquerda */
+.coluna-esquerda {
+    margin-left: 110px;
+    margin-right: 0px;
+}
+
+/* Coluna do meio */
+.coluna-meio {
+    margin-left: 71px;
+    margin-right: 75px;
+}
+
+/* Coluna da direita */
+.coluna-direita {
+    margin-right: 240px;
+}
+
+/* Estilo dos containers de itens */
+.produto-container {
+    width: 286px;
+    height: 376px;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 7px 10px 10px 10px rgba(0, 0, 0, 0.15); /* Sombra na parte inferior */
+    margin-bottom: 50px; /* Espaço entre os containers */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: transform 0.3s ease-in-out;
+}
+.produto-container:hover,
+.coluna-esquerda .produto-container2:hover,
+.coluna-meio .produto-container10:hover,
+.coluna-direita .produto-container18:hover{
+    transform: scale(1.05); /* Aumenta o tamanho do container em 5% */
+    box-shadow: 7px 10px 10px 10px rgba(1, 115, 191, 0.25);
+    z-index: 1; /* Coloca o item no topo para que não fique por trás de outros */
+}
+
+/* Imagem dentro do container */
+.produto-container img,
+.coluna-esquerda .produto-container2 img,
+.coluna-meio .produto-container10 img,
+.coluna-direita .produto-container18 img {
+    width: 180px;
+    height: 192px;
+    margin-top: 22.6px; /* Espaço superior */
+    transition: transform 0.3s ease-in-out;
+}
+.produto-container:hover img,
+.coluna-esquerda .produto-container2:hover img,
+.coluna-meio .produto-container10:hover img,
+.coluna-direita .produto-container18:hover img{
+    transform: scale(1.05); /* Aumenta o tamanho da imagem em 5% */
+
+}
+/* Texto abaixo da imagem */
+.produto-container p,
+.coluna-esquerda .produto-container2 p,
+.coluna-meio .produto-container10 p,
+.coluna-direita .produto-container18 p,
+.coluna-direita .produto-container12 p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #1E1E1E;
+    text-align: center;
+    margin-top: 38px;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+/* Estilo do botão */
+
+/* Adicionando margin-bottom de 187px para os containers específicos */
+
+.coluna-esquerda .produto-container2,
+.coluna-meio .produto-container10,
+.coluna-direita .produto-container18 {
+    width: 286px;
+    height: 376px;
+    border-radius: 7px;
+    box-shadow: 7px 10px 10px 10px rgba(0, 0, 0, 0.15); /* Sombra na parte inferior */
+    margin-bottom: 38px; /* Espaço entre os containers */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 220px;
+    border: none;
+}
+.produto-container  button,
+.coluna-esquerda .produto-container2 button,
+.coluna-meio .produto-container10 button,
+.coluna-direita .produto-container18 button,
+.coluna-direita .produto-container19 button,
+.coluna-direita .produto-container24 button {
+    width: 123.6px;
+    height: 32px;
+    background-color: #0173BF;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px; 
+}
+                                                                      
+/* Efeito de hover no botão */
+.produto-container button:hover,
+.coluna-esquerda .produto-container2 button:hover,
+.coluna-meio .produto-container10 button:hover,
+.coluna-direita .produto-container18 button:hover {
+    background-color: #04A9F4; /* Gradiente suave */
+}
+
+
+
+/* Estilo para o retângulo de cotação */
+.quotation-rectangle {
+    position: absolute;
+    bottom: -1320px;
+    right: 0;
+    width: 845px;
+    height: 83px;
+    background-color: #0173BF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px;
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2); /* Sombra para o retângulo */
+    opacity: 0;
+    transform: translateX(-100%); /* Inicialmente o retângulo está fora da tela à esquerda */
+    animation: slideInFromLeft 1s forwards; /* Aplicando a animação */
+}
+
+/* Animação de deslizar da esquerda para a direita */
+@keyframes slideInFromLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Finaliza na posição normal */
+    }
+}
+
+/* Triângulo no lado esquerdo do retângulo */
+.quotation-rectangle::before {
+    content: "";
+    position: absolute;
+    left: -83px;
+    top: 0;
+    border-top: 83px solid transparent;
+    border-right: 83px solid #0173BF;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideInFromLeft 1s forwards 0.3s;
+
+
+}
+/* Estilo para o texto dentro do retângulo */
+.quotation-rectangle p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900; /* Usando Inter Black */
+    font-size: 40px;
+    color: #373333;
+    text-align: center;
+    font-style: italic;
+    margin: 0;
+}
+.quotation-rectangle:hover p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    color: #FFFFFF;
+    text-align: center;
+    font-style: italic;
+    margin: 0;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.quotation-rectangle p {
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.preco {
+    position: absolute;
+    left: 0; /* Faz a div começar na lateral esquerda */
+    bottom: -2350px;
+    width: 710px;
+    height: 83px;
+    background-color: #0173BF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px;
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2); /* Sombra para o retângulo */
+    opacity: 0;
+    transform: translateX(-100%); /* Inicialmente fora da tela à esquerda */
+    animation: slideInFromLeft 1s forwards;
+}
+
+/* Animação de deslizar da esquerda para a direita */
+@keyframes slideInFromLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Finaliza na posição normal */
+    }
+}
+
+.preco::before {
+    content: "";
+    position: absolute;
+    right: -83px;
+    top: 0;
+    border-top: 83px solid transparent; /* Altura do triângulo */
+    border-left: 83px solid #0173BF; /* Base do triângulo invertida */
+    width: 0;
+    height: 0;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideInFromLeft 1s forwards 0.3s;
+}
+.preco p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900; /* Usando Inter Black */
+    font-size: 40px;
+    color: #373333;
+    text-align: center;
+    font-style: italic;
+    margin: 0;
+}
+.preco:hover p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    color: #FFFFFF;
+    text-align: center;
+    font-style: italic;
+    margin: 0;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.preco p {
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+#produto-container12,
+#produto-container20,
+#produto-container4,
+#produto-container6,
+#produto-container14,
+#produto-container22{
+    margin-bottom: 220px;
+}
+.conect {
+    position: absolute;
+    left: 450px;
+    bottom: -3370px;
+    width: 1000px;
+    height: 83px;
+    background-color: #0173BF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px;
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideInFromLeft 1s forwards;
+}
+/* Animação de deslizar da esquerda para a direita */
+@keyframes slideInFromLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Finaliza na posição normal */
+    }
+}
+
+
+.conect p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900; /* Usando Inter Black */
+    font-size: 40px;
+    color: #373333;
+    text-align: center;
+    font-style: italic;
+    margin: 0;
+}
+.conect:hover p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    color: #FFFFFF;
+    text-align: center;
+    font-style: italic;
+    margin: 0;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.conect p {
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+/* Triângulos da esquerda (apontam para a direita) */
+.triangulo-esquerda,
+.triangulo-esquerda2 {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 41.5px solid transparent;
+    border-right: 41.5px solid #0173BF;
+    opacity: 0;
+    animation: slideInFromLeft 1s forwards 0.3s;
+    transform: translateX(-100%);
+    left: 409px;
+    margin-top: 2912px;
+}
+
+/* Triângulo de baixo da esquerda */
+.triangulo-esquerda2 {
+    bottom: -3370px; /* você pode mudar conforme precisar */
+}
+
+/* Triângulos da direita (apontam para a esquerda) */
+.triangulo-direita,
+.triangulo-direita2 {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 41.5px solid transparent; /* metade de 83px */
+    border-left: 41.5px solid #0173BF;     /* metade de 83px */
+    opacity: 0;
+    animation: slideInFromLeft 1s forwards 0.3s;
+    transform: translateX(100%);
+    right: 414px;
+    margin-top: 2912px;
+}
+
+/* Triângulo de baixo da direita */
+.triangulo-direita2 {
+    bottom: -3370px; /* você pode mudar conforme precisar */
+}
