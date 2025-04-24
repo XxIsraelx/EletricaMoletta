@@ -1,0 +1,141 @@
+body .after{
+    height: 4374px; /* Ajuste a altura conforme necessário */
+    background-color: #FFFBFB; /* Cor após o retângulo */
+}
+.schmersal {
+    width: 100%;
+    height: 135px;
+    background: linear-gradient(45deg, #093A83, #052733); /* Gradiente de cor */
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.schmersal p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 32px;
+    color: #FFFFFF;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(100px); /* Inicialmente abaixo */
+    opacity: 0; /* Inicialmente invisível */
+    transition: transform 1s ease, opacity 1s ease; /* Transição mais lenta */
+}
+.left {
+    position: relative;
+    width: 150px; /* Largura da imagem */
+    height: 250px; /* Altura do background */
+    margin-left: 70px; /* Espaçamento para a esquerda */
+    background-image: url('./assets_nav/logoMoletta.png');
+    background-size: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    display: inline-block; /* Para alinhar ao lado do outro */
+    border-radius: 8px;
+}
+
+/* Estilo para o background da direita */
+.right {
+    position: relative;
+    width: 310px; /* Para que ocupe quase metade da tela */
+    height: 250px; /* Altura do background */
+    margin-right: 70px; /* Espaçamento para a direita */
+    background-image: url('./assets_home/assets_container2/schmersal.png');
+    background-size: 325px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    display: inline-block; /* Para alinhar ao lado do outro */
+    border-radius: 8px;
+}
+.left, .right {
+    transform: scale(1);
+    transition: transform 0.4s ease;
+}
+
+.left:hover, .right:hover {
+    transform: scale(1.1); /* Aumenta ligeiramente a imagem */
+}
+
+
+/* Ajustando a div que vai conter as duas backgrounds */
+.logos {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -40px; /* Diminuindo o espaçamento entre o retângulo e os backgrounds */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.produtos-heading {
+    text-align: center; /* Centraliza o texto */
+    margin-top: -10px; /* Ajuste o espaçamento conforme necessário */
+}
+
+.produtos-heading p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400; /* Usando a fonte regular para "Confira nossos" */
+    font-size: 36px;
+    color: #373333;
+    margin: 0;
+}
+
+.produtos-heading .bold-products {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800; /* Usando a fonte extra-bold para "Produtos" */
+    font-size: 40px;
+}
+.produtos-heading {
+    text-align: center; /* Centraliza o texto */
+    margin-top: 40px; /* Ajuste o espaçamento conforme necessário */
+}
+
+.produtos-heading p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400; /* Usando a fonte regular para "Confira nossos" */
+    font-size: 36px;
+    color: #373333;
+    margin: 0;
+}
+
+.produtos-heading .bold-products {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800; /* Usando a fonte extra-bold para "Produtos" */
+    font-size: 40px;
+}
+
+/* Estilo para o retângulo abaixo da frase */
+
+.retangulo-bottom {
+    width: 50px; /* Largura inicial */
+    height: 4px; /* Espessura do retângulo */
+    background-color: #000000; /* Cor preta */
+    margin-top: 20px; /* Espaço entre a frase e o retângulo */
+    margin-left: auto; /* Alinha o retângulo à esquerda */
+    margin-right: auto; /* Alinha o retângulo à direita */
+    transition: width 1s ease; /* Transição suave para a mudança de largura */
+}
+/* Quando a classe 'active' for adicionada, o retângulo aumenta de largura */
+.retangulo-bottom.active {
+    width: 250px;  /* Nova largura do retângulo ao "ativar o hover" */
+}
+.retangulo-bottom:hover {
+    background-color: #093A83
+
+}
+.bold-produtos {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800; /* Fonte extra-bold */
+    font-size: 40px;
+    color: #373333; /* Cor inicial */
+    transition: color 0.3s ease; /* Transição suave para a mudança de cor */
+}
+
+/* Efeito ao passar o mouse sobre a palavra "Produtos" */
+.bold-produtos:hover {
+    color: #093A83 /* Nova cor ao passar o mouse */
+}

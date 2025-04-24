@@ -136,7 +136,7 @@
 /* Estilo para o retângulo de cotação */
 .quotation-rectangle {
     position: absolute;
-    bottom: -1320px;
+    bottom: -1260px;
     right: 0;
     width: 845px;
     height: 83px;
@@ -203,7 +203,7 @@
 .preco {
     position: absolute;
     left: 0; /* Faz a div começar na lateral esquerda */
-    bottom: -2350px;
+    bottom: -2280px;
     width: 710px;
     height: 83px;
     background-color: #0173BF;
@@ -273,7 +273,7 @@
 .conect {
     position: absolute;
     left: 450px;
-    bottom: -3370px;
+    bottom: -3304px;
     width: 1000px;
     height: 83px;
     background-color: #0173BF;
@@ -335,7 +335,7 @@
 
 /* Triângulo de baixo da esquerda */
 .triangulo-esquerda2 {
-    bottom: -3370px; /* você pode mudar conforme precisar */
+    bottom: -3304px; /* você pode mudar conforme precisar */
 }
 
 /* Triângulos da direita (apontam para a esquerda) */
@@ -355,5 +355,5 @@
 
 /* Triângulo de baixo da direita */
 .triangulo-direita2 {
-    bottom: -3370px; /* você pode mudar conforme precisar */
+    bottom: -3304px; /* você pode mudar conforme precisar */
 }

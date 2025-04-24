@@ -11,45 +11,42 @@
 }
 
 .container_industria {
-    margin-left: 2vw;
     position: relative;
     top: 100px;
-    left: 0;
-    width: 90vw;
-    max-width: 1720px;
+    width: calc(100vw - 4vw); /* A largura será 100% da tela, menos 4vw de margem */
+    max-width: none;           /* Remove o limite de largura */
     height: 65vh;
     max-height: 600px;
+    margin: 0 2vw;             /* Margem responsiva à esquerda e à direita */
+    padding: 0 4vw;            /* Espaço interno responsivo à esquerda e à direita */
     background-image: url('./assets_home/industria-4-925x400.png');
-    background-size: 100%;
+    background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     z-index: 1;
     border-radius: 2px;
     display: flex;
     align-items: center;
-    padding-left: 5vw;
-    gap: 3vw;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+    gap: 3vw;                  /* Espaçamento entre os itens (responsivo) */
+    box-sizing: border-box;
 }
 
-/* Ajustes para telas menores */
-@media (max-width: 1024px) {
-    .container_industria {
-        height: 40vh;
-        padding-left: 3vw;
-        gap: 2vw;
-    }
-}
-
+/* Responsividade para ajustar o espaçamento entre os itens em telas menores */
 @media (max-width: 768px) {
     .container_industria {
-        flex-direction: column;
-        height: auto;
-        padding: 20px;
-        background-attachment: scroll;
+        gap: 5vw; /* Aumenta o espaçamento entre os itens em telas menores */
+        padding: 0 2vw; /* Ajusta o padding para telas menores */
     }
 }
 
+/* Responsividade para telas muito pequenas (exemplo, smartphones em modo retrato) */
+@media (max-width: 480px) {
+    .container_industria {
+        gap: 6vw; /* Aumenta mais o espaçamento entre os itens em telas pequenas */
+        padding: 0 1vw; /* Diminui o padding para dispositivos menores */
+    }
+}
 
 
 .rectangle-inside_1,
@@ -112,21 +109,36 @@
 }
 
 
-
-
 .rectangle-inside_2 {
-    width: 540px;
-    height: 400px;
+    width: 90%;                  /* Responsivo, ocupa 90% da largura disponível */
+    max-width: 550px;            /* Mantém o limite visual original */
+    height: 400px;               /* Altura fixa como antes */
     background-color: rgba(254, 255, 255, 0.8);
     z-index: 1;
-    position: relative; /* Para garantir que os elementos internos se alinhem corretamente */
-    margin-left: 425px;
-    padding-top: 20px; /* Espaço para o título */
+    position: relative;          /* Garante o posicionamento relativo */
+    margin-left: auto;           /* Deslocamento à esquerda */
+    margin-right: 2vw;           /* Deslocamento à direita responsivo */
+    padding-top: 20px;           /* Espaço para o título */
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column;      /* Itens em coluna */
+    align-items: center;         /* Centraliza horizontalmente */
+    box-sizing: border-box;      /* Padding incluso na largura */
+    gap: 0;                      /* Preserva o layout original sem espaçamento adicional */
 }
 
+/* Responsividade para telas médias (exemplo, tablets) */
+@media (max-width: 768px) {
+    .rectangle-inside_2 {
+        margin-right: 8vw;       /* Aumenta o deslocamento à direita em telas médias */
+    }
+}
+
+/* Responsividade para telas pequenas (exemplo, smartphones) */
+@media (max-width: 480px) {
+    .rectangle-inside_2 {
+        margin-right: 10vw;      /* Aumenta mais o deslocamento à direita em telas pequenas */
+    }
+}
 .rectangle-inside_2 h1 {
     font-family: 'Inter', sans-serif;
     font-weight: bold;
@@ -241,5 +253,5 @@
 
 body .after-welcome {
     background-color: #FFFBFB; /* Cor após o retângulo */
-    height: 4374px; /* Ajuste a altura conforme necessário */
+    height: 4400px; /* Ajuste a altura conforme necessário */
 }
