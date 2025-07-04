@@ -1,0 +1,128 @@
+/* Estilo para o background da esquerda */
+.left-background {
+    position: relative;
+    width: 150px; /* Largura da imagem */
+    height: 250px; /* Altura do background */
+    margin-left: 70px; /* Espaçamento para a esquerda */
+    background-image: url('./assets_nav/logoMoletta.png');
+    background-size: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    display: inline-block; /* Para alinhar ao lado do outro */
+    border-radius: 8px;
+}
+
+/* Estilo para o background da direita */
+.right-background {
+    position: relative;
+    width: 280px; /* Para que ocupe quase metade da tela */
+    height: 250px; /* Altura do background */
+    margin-right: 70px; /* Espaçamento para a direita */
+    background-image: url('./assets_home/assets_container2/altronic-removebg-preview.png');
+    background-size: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    display: inline-block; /* Para alinhar ao lado do outro */
+    border-radius: 8px;
+}
+
+
+/* Ajustando a div que vai conter as duas backgrounds */
+.background_logos {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -40px; /* Diminuindo o espaçamento entre o retângulo e os backgrounds */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.products-heading {
+    text-align: center; /* Centraliza o texto */
+    margin-top: -10px; /* Ajuste o espaçamento conforme necessário */
+}
+
+.products-heading p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400; /* Usando a fonte regular para "Confira nossos" */
+    font-size: 36px;
+    color: #373333;
+    margin: 0;
+}
+
+.products-heading .bold-products {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800; /* Usando a fonte extra-bold para "Produtos" */
+    font-size: 40px;
+}
+.products-heading {
+    text-align: center; /* Centraliza o texto */
+    margin-top: 40px; /* Ajuste o espaçamento conforme necessário */
+}
+
+.products-heading p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400; /* Usando a fonte regular para "Confira nossos" */
+    font-size: 36px;
+    color: #373333;
+    margin: 0;
+}
+
+.products-heading .bold-products {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800; /* Usando a fonte extra-bold para "Produtos" */
+    font-size: 40px;
+}
+
+/* Estilo para o retângulo abaixo da frase */
+.rectangle-bottom {
+    width: 100px; /* Largura do retângulo */
+    height: 4px; /* Espessura do retângulo */
+    background-color: #000000; /* Cor preta */
+    margin-top: 20px; /* Espaço entre a frase e o retângulo */
+    margin-left: auto; /* Alinha o retângulo à esquerda */
+    margin-right: auto; /* Alinha o retângulo à direita */
+}
+
+.left-background, .right-background {
+    transform: scale(1);
+    transition: transform 0.4s ease;
+}
+
+.left-background:hover, .right-background:hover {
+    transform: scale(1.1); /* Aumenta ligeiramente a imagem */
+}
+/* Estilo inicial para a palavra "Produtos" */
+.bold-products {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800; /* Fonte extra-bold */
+    font-size: 40px;
+    color: #373333; /* Cor inicial */
+    transition: color 0.3s ease; /* Transição suave para a mudança de cor */
+}
+
+/* Efeito ao passar o mouse sobre a palavra "Produtos" */
+.bold-products:hover {
+    color: #0462a0 /* Nova cor ao passar o mouse */
+}
+.rectangle-bottom {
+    width: 50px; /* Largura inicial */
+    height: 4px; /* Espessura do retângulo */
+    background-color: #000000; /* Cor preta */
+    margin-top: 20px; /* Espaço entre a frase e o retângulo */
+    margin-left: auto; /* Alinha o retângulo à esquerda */
+    margin-right: auto; /* Alinha o retângulo à direita */
+    transition: width 1s ease; /* Transição suave para a mudança de largura */
+}
+/* Quando a classe 'active' for adicionada, o retângulo aumenta de largura */
+.rectangle-bottom.active {
+    width: 250px;  /* Nova largura do retângulo ao "ativar o hover" */
+}
+.rectangle-bottom:hover {
+    background-color: #0462a0
+
+}
+
+
+
+
